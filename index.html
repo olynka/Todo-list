@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:ital,wght@0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <title>doto</title>
+  </head>
+  <body>
+    <div class="container mob-table">
+      <div class="headers">
+        <h2 class="notes-title">Manage Mobiles</h2>
+        <button
+          class="btn btn-danger"
+          style="color: #fff; background-color: rgb(207, 74, 44)"
+        >
+          Delete
+        </button>
+      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Created</th>
+            <th>Category</th>
+            <th>Content</th>
+            <th>Dates</th>
+            <th>Icon</th>
+          </tr>
+        </thead>
+        <tbody class="tbody-js"></tbody>
+      </table>
+      <button
+        class="btn add"
+        style="color: #fff; background-color: rgb(168, 175, 168)"
+      >
+        Create Note
+      </button>
+    </div>
+
+    <form class="container-form">
+      <div class="container-mobile">
+        <div class="form-input">
+          <label for="mobile">Name</label>
+          <input
+            name="name"
+            type="text"
+            value=""
+            class="form-control name"
+            id="mobile"
+            minlength="5"
+          />
+        </div>
+        <div class="form-input">
+          <label for="created">Created</label>
+          <input
+            name="created"
+            type="text"
+            class="form-control created"
+            id="created"
+            minlength="5"
+          />
+        </div>
+        <div class="form-input">
+          <label for="category">Category</label>
+          <input
+            name="category"
+            type="text"
+            class="form-control category"
+            id="category"
+            minlength="5"
+          />
+        </div>
+        <div class="form-input">
+          <label for="content">content</label>
+          <input
+            name="content"
+            type="text"
+            class="form-control content"
+            id="content"
+            minlength="5"
+          />
+        </div>
+        <div class="form-input">
+          <label for="dates">Dates</label>
+          <input
+            name="dates"
+            type="text"
+            class="form-control dates"
+            id="dates"
+            minlength="5"
+          />
+        </div>
+
+        <div class="form-button">
+          <button class="btn save" type="submit">Save</button>
+          <button class="btn cancel" type="button">cancel</button>
+        </div>
+      </div>
+    </form>
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
