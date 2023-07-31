@@ -1,9 +1,9 @@
 import notesItems from "./components/notesItems.js";
 import editButton from "./components/buttonEdit.js";
-import buttonRemove from "./components/buttonRemove.js";
+
 import buttonCreateNote from "./buttonCreateNote.js";
 import buttonModalCancel from "./buttonModalCancel.js";
-import buttonSave from "./components/buttonSave.js";
+import buttonDelete from "./components/buttonDelete.js";
 import formModal from "./formModal.js";
 
 
@@ -44,12 +44,12 @@ function buttons() {
     btn.addEventListener("click", editButton);
   }
   for (let btn of document.querySelectorAll(".btn-danger")) {
-    btn.addEventListener("click", buttonRemove);
+    btn.addEventListener("click", buttonDelete);
   }
-  for (let btn of document.querySelectorAll(".btn-info")) {
-    btn.addEventListener("click", buttonSave);
+  // for (let btn of document.querySelectorAll(".btn-info")) {
+  //   btn.addEventListener("click", buttonSave);
     
-  }
+  // }
   addBtn.addEventListener("click", buttonCreateNote);
   cancelBtn.addEventListener("click", buttonModalCancel);
   forma.addEventListener("submit", formModal);

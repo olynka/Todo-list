@@ -16,7 +16,7 @@ export default function editButton(e) {
     if (id.i === idUser) {
       const name = document.querySelector(".name");
       name.value = id.Name;
-      id.Boolean = true;
+     
 
       name.addEventListener("input", (event) => {
         // console.log(event.currentTarget.value);

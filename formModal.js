@@ -38,7 +38,7 @@ export default function formModal(e) {
             <td>
               <button class="btn btn-primary" >Edit</button>
               <button class="btn btn-info">Save</button>
-              <button class="btn btn-danger">Delete</button>
+              <button type="remove"class="btn btn-danger">Delete</button>
             </td>
           </tr>
         `;
