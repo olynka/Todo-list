@@ -1,7 +1,7 @@
 const form = document.querySelector(".container-form");
 const saveBtn = document.querySelector(".save");
 import formModal from "../formModal.js";
-import createNotesItemsMarkup from "../createNotesItemsMarkup.js";
+import createNotesItemsMarkup from "../index.js";
 
 
 import notesItems from "./notesItems.js";
@@ -10,7 +10,7 @@ export default function editButton(e) {
   form.classList.add("active");
 
   const idUser = parseInt(e.target.parentElement.parentElement.id);
-  // console.log(e.target.parentElement.parentElement.id);
+  console.log(e.target.parentElement.parentElement.id);
 
   for (let id of notesItems) {
     if (id.i === idUser) {

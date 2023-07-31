@@ -1,5 +1,5 @@
 import notesItems from "./components/notesItems.js";
-import createNotesItemsMarkup from "./createNotesItemsMarkup.js";
+import createNotesItemsMarkup from "./index.js";
 
 
 
