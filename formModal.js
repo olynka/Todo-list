@@ -1,5 +1,8 @@
 import notesItems from "./components/notesItems.js";
-import buttons from "./index.js";
+import createNotesItemsMarkup from "./createNotesItemsMarkup.js";
+
+
+
 
 const form = document.querySelector(".container-form");
 const tbody = document.querySelector(".tbody-js");
@@ -59,11 +62,12 @@ export default function formModal(e) {
   //     // tbody.innerHTML += newUser;
   //   }
   
+      tbody.innerHTML = "";
+      tbody.insertAdjacentHTML("beforeend", createNotesItemsMarkup(notesItems));
   
-  
-  tbody.insertAdjacentHTML("beforeend", newUser);
+  // tbody.insertAdjacentHTML("beforeend", newUser);
 
-  buttons();
+
   return;
 }
 

@@ -4,7 +4,9 @@ import buttonRemove from "./components/buttonRemove.js";
 import buttonCreateNote from "./buttonCreateNote.js";
 import buttonModalCancel from "./buttonModalCancel.js";
 import buttonSave from "./components/buttonSave.js";
-import formModal from "./formModal.js";
+import formModal from "./formModal.js"
+import createNotesItemsMarkup from "./createNotesItemsMarkup.js";
+
 
 
 const tbody = document.querySelector(".tbody-js");
@@ -13,28 +15,7 @@ const cancelBtn = document.querySelector(".cancel");
 const saveBtn = document.querySelector(".save");
 const forma = document.querySelector(".container-form");
 
-function createNotesItemsMarkup(notes) {
- 
-  return notes
-    .map(
-      ({ Name, Created, Category, Content, Dates, i }) =>
-        `
-          <tr id=${i}>
-            <td >${Name}</td>
-            <td>${Created}</td>
-            <td>${Category}</td>
-            <td>${Content}</td>
-            <td>${Dates}</td>
-            <td>
-              <button class="btn btn-primary" >Edit</button>
-              <button class="btn btn-info">Save</button>
-              <button class="btn btn-danger">Delete</button>
-            </td>
-          </tr>
-        `
-    )
-    .join("");
-}
+
 
 const NotesItemsMarkup = createNotesItemsMarkup(notesItems);
 tbody.insertAdjacentHTML("beforeend", NotesItemsMarkup);
@@ -58,4 +39,4 @@ buttons();
 
 
 
-export default buttons
+export default buttons()
