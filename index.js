@@ -1,40 +1,17 @@
 import notesItems from "./components/notesItems.js";
 import editButton from "./components/buttonEdit.js";
-
-import buttonCreateNote from "./buttonCreateNote.js";
-import buttonModalCancel from "./buttonModalCancel.js";
+import buttonCreateNote from "./components/buttonCreateNote.js";
+import buttonModalCancel from "./components/buttonModalCancel.js";
 import buttonDelete from "./components/buttonDelete.js";
-import formModal from "./formModal.js";
-
+import formModal from "./components/formModal.js";
+import buttonDeleteAll from "./components/buttonDeleteAll.js";
+import createNotesItemsMarkup from "./components/createNotesItemsMarkup.js";
+const btnDeleteAll = document.querySelector(".btn-deleteAll");
 
 const tbody = document.querySelector(".tbody-js");
 const addBtn = document.querySelector(".add");
 const cancelBtn = document.querySelector(".cancel");
-const saveBtn = document.querySelector(".save");
 const forma = document.querySelector(".container-form");
-
-function createNotesItemsMarkup(notes) {
- 
-  return notes
-    .map(
-      ({ Name, Created, Category, Content, Dates, i }) =>
-        `
-          <tr id=${i}>
-            <td >${Name}</td>
-            <td>${Created}</td>
-            <td>${Category}</td>
-            <td>${Content}</td>
-            <td>${Dates}</td>
-            <td>
-              <button class="btn btn-primary" >Edit</button>
-              <button class="btn btn-info">Save</button>
-              <button class="btn btn-danger">Delete</button>
-            </td>
-          </tr>
-        `
-    )
-    .join("");
-}
 
 const NotesItemsMarkup = createNotesItemsMarkup(notesItems);
 tbody.insertAdjacentHTML("beforeend", NotesItemsMarkup);
@@ -48,14 +25,13 @@ function buttons() {
   }
   // for (let btn of document.querySelectorAll(".btn-info")) {
   //   btn.addEventListener("click", buttonSave);
-    
+
   // }
   addBtn.addEventListener("click", buttonCreateNote);
   cancelBtn.addEventListener("click", buttonModalCancel);
   forma.addEventListener("submit", formModal);
+  btnDeleteAll.addEventListener("click", buttonDeleteAll);
 }
 buttons();
 
-
-
-export default createNotesItemsMarkup
+export default createNotesItemsMarkup;

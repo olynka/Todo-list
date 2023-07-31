@@ -1,8 +1,5 @@
-import notesItems from "./components/notesItems.js";
-import createNotesItemsMarkup from "./index.js";
-
-
-
+import notesItems from "./notesItems.js";
+import createNotesItemsMarkup from "./createNotesItemsMarkup.js";
 
 const form = document.querySelector(".container-form");
 const tbody = document.querySelector(".tbody-js");
@@ -11,11 +8,8 @@ export default function formModal(e) {
   e.preventDefault();
 
   const {
-    elements: { name, created, category, content, dates},
+    elements: { name, created, category, content, dates },
   } = e.currentTarget;
-
-    
-
 
   const number = Math.ceil(Math.random() * (10000000 - 1) + 1);
 
@@ -49,12 +43,8 @@ export default function formModal(e) {
 
   notesItems.push(info);
 
-      tbody.innerHTML = "";
-      tbody.insertAdjacentHTML("beforeend", createNotesItemsMarkup(notesItems));
-  
-
+  tbody.innerHTML = "";
+  tbody.insertAdjacentHTML("beforeend", createNotesItemsMarkup(notesItems));
 
   return;
 }
-
-

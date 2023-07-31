@@ -1,8 +1,6 @@
 const form = document.querySelector(".container-form");
 const saveBtn = document.querySelector(".save");
-import formModal from "../formModal.js";
-import createNotesItemsMarkup from "../index.js";
-
+import createNotesItemsMarkup from "./createNotesItemsMarkup.js";
 
 import notesItems from "./notesItems.js";
 
@@ -16,7 +14,6 @@ export default function editButton(e) {
     if (id.i === idUser) {
       const name = document.querySelector(".name");
       name.value = id.Name;
-     
 
       name.addEventListener("input", (event) => {
         // console.log(event.currentTarget.value);
@@ -29,7 +26,6 @@ export default function editButton(e) {
       created.addEventListener("input", (event) => {
         //  console.log(event.currentTarget.value);
         id.Created = event.currentTarget.value;
-        
       });
 
       const category = document.querySelector(".category");
@@ -58,6 +54,6 @@ export default function editButton(e) {
       console.log(id);
     }
   }
- createNotesItemsMarkup(notesItems);
+  createNotesItemsMarkup(notesItems);
   return;
 }
