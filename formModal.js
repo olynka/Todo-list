@@ -49,23 +49,9 @@ export default function formModal(e) {
 
   notesItems.push(info);
 
-
-  // // рендер за умовою 
-  
-  // if (i === undefined) {
-      
-    
-  //     tbody.insertAdjacentHTML("beforeend", newUser);
-  //   } else {
-     
-
-  //     // tbody.innerHTML += newUser;
-  //   }
-  
       tbody.innerHTML = "";
       tbody.insertAdjacentHTML("beforeend", createNotesItemsMarkup(notesItems));
   
-  // tbody.insertAdjacentHTML("beforeend", newUser);
 
 
   return;

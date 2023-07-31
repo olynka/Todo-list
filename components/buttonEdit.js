@@ -1,6 +1,8 @@
 const form = document.querySelector(".container-form");
 const saveBtn = document.querySelector(".save");
 import formModal from "../formModal.js";
+import createNotesItemsMarkup from "../createNotesItemsMarkup.js";
+
 
 import notesItems from "./notesItems.js";
 
@@ -56,6 +58,6 @@ export default function editButton(e) {
       console.log(id);
     }
   }
-  formModal;
+ createNotesItemsMarkup(notesItems);
   return;
 }
