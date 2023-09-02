@@ -107,6 +107,14 @@ th {
     margin: 20px;
     gap: 100px
 }
-.content{
+.contents{
     margin-top: 200px;
+}
+.radio-button{
+    display: flex;
+    justify-content: center;
+    
+}
+.radio-button-form{
+    margin-left: 50px;
 }

@@ -2,6 +2,8 @@ import notesItems from "./notesItems.js";import createNotesItemsMarkup from "./c
 const tbody = document.querySelector(".tbody-js");
 
 export default function buttonDelete(e) {
+  
+ 
   remove(e.target.parentElement.parentElement.id);
 
   function remove(o) {

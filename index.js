@@ -8,6 +8,9 @@ import buttonDeleteAll from "./components/buttonDeleteAll.js";
 import createNotesItemsMarkup from "./components/createNotesItemsMarkup.js";
 const btnDeleteAll = document.querySelector(".btn-deleteAll");
 
+
+
+
 const tbody = document.querySelector(".tbody-js");
 const addBtn = document.querySelector(".add");
 const cancelBtn = document.querySelector(".cancel");
@@ -21,10 +24,10 @@ function buttons() {
     btn.addEventListener("click", editButton);
   }
   for (let btn of document.querySelectorAll(".btn-danger")) {
-    btn.addEventListener("click", buttonDelete);
+    btn.addEventListener("click", buttonDelete );
   }
   // for (let btn of document.querySelectorAll(".btn-info")) {
-  //   btn.addEventListener("click", buttonSave);
+  //   btn.addEventListener("click", clickIdUser);
 
   // }
   addBtn.addEventListener("click", buttonCreateNote);
@@ -33,5 +36,8 @@ function buttons() {
   btnDeleteAll.addEventListener("click", buttonDeleteAll);
 }
 buttons();
+
+  // rudioButton()
+
 
 export default createNotesItemsMarkup;
